@@ -72,7 +72,7 @@
 ### Form    
     - Label : for
     - Input : id
-![예시](https://user-images.githubusercontent.com/50939886/138668157-623e27cc-dc63-4b42-9d62-17011b8316d1.png)
+![예시](https://user-images.githubusercontent.com/50939886/138669464-efcac021-788f-413b-aeaa-578d4837b9dd.png)
 
     - 값이 같을 때 for 과 같은 값을 가진 id를 들고있는 input 작동시켜준다
 
