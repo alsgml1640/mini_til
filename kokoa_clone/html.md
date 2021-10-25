@@ -74,7 +74,7 @@
 - Label : for
 - Input : id
 
-##### 이미지 추가하기@@@@
+![예시](https://user-images.githubusercontent.com/50939886/138668157-623e27cc-dc63-4b42-9d62-17011b8316d1.png)
 
 - 값이 같을 때 for 과 같은 값을 가진 id를 들고있는 input 작동시켜준다
 
