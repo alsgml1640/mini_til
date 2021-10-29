@@ -15,10 +15,11 @@ cascading : 위에서 아래로 흐르는
   예시) div, p
 - 박스가 아닌것 (inline) : 옆에 다른 요소가 올 수 있다.
   예시) a, span
+
   ![image](https://media.vlpt.us/images/eunsonny/post/e7ff3081-ded6-4c35-b2bd-f9d679a1d0f2/blockinline.png)
 
-- display : `block`를 가진 요소를 `inline`으로 바꾸고싶으면 `display : inline`
-- display : `inline`을 가진 요소를 `block`으로 바꾸고싶으면 `display : block`
+- `display : block`를 가진 요소를 `inline`으로 바꾸고싶으면 `display : inline`
+- `display : inline`을 가진 요소를 `block`으로 바꾸고싶으면 `display : block`
 
 ```
 	• Inline의 특징
