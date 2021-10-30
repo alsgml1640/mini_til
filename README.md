@@ -7,9 +7,9 @@
 
 ---
 
-#### 😀노마드 코코아톡 클론코딩
+#### 정리 내역
 
-- [html 파트 정리 내용](https://github.com/alsgml1640/mini_til/blob/ac305217f6ee8a8d861037321f6fe4faf600a734/kokoa_clone/html.md)
+- [html 파트 정리 내용](https://github.com/alsgml1640/mini_til/blob/2fa34bd494f60045a9897fe4d8d253c663301369/Html/README.md)
 
-- [css 파트 정리 내용 ](https://github.com/alsgml1640/mini_til/blob/58e43c529f0a772615db95198145baca51a195ba/kokoa_clone/css.md)
+- [css 파트 정리 내용 ](https://github.com/alsgml1640/mini_til/blob/2fa34bd494f60045a9897fe4d8d253c663301369/Css/README.md)
   flexbox 부분 수정해야함
