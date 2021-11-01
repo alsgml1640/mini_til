@@ -30,11 +30,11 @@
 - `display : inline`을 가진 요소를 `block`으로 바꾸고싶으면 `display : block`
 
 ```
-	• Inline의 특징
-	: 높이와 너비가 없다
-	: padding 은 적용된다
-	: margin은 좌우만 된다. (위 아래에 마진을 가질수 없다 )
-	: 만약 위 아래 마진을 가지고싶으면 display를 block으로 변경해야함
+• Inline의 특징
+  : 높이와 너비가 없다
+  : padding 은 적용된다
+  : margin은 좌우만 된다. (위 아래에 마진을 가질수 없다 )
+  : 만약 위 아래 마진을 가지고싶으면 display를 block으로 변경해야함
   : div의 display를 inline으로 바꾸면 화면에서 보이지않는다.
 ```
 
@@ -139,11 +139,11 @@
 
 ## transition (트랜지션)
 
-	요소의 속성을 서서의 다른 상태로 변화하는 애니메이션을 만드는 방법
-	state (ex. :hover , :active ...)가 없는 요소에 붙는게 좋다
-	transition은 state에 따라 바뀌는 property를 갖고 있으면 사용된다
-	트랜지션은 뿌리(:root)에 선언한다.
-	액션을 나눠서 주려면 콤마를 이용해서 따로 준다.
+- 요소의 속성을 서서의 다른 상태로 변화하는 애니메이션을 만드는 방법
+- state (ex. :hover , :active ...)가 없는 요소에 붙는게 좋다
+- transition은 state에 따라 바뀌는 property를 갖고 있으면 사용된다
+- 트랜지션은 뿌리(:root)에 선언한다.
+- 액션을 나눠서 주려면 콤마를 이용해서 따로 준다.
 
     <!-- 예시-->
     <head>
