@@ -139,11 +139,13 @@
 
 ## transition (트랜지션)
 
-- 요소의 속성을 서서의 다른 상태로 변화하는 애니메이션을 만드는 방법
-- state (ex. :hover , :active ...)가 없는 요소에 붙는게 좋다
-- transition은 state에 따라 바뀌는 property를 갖고 있으면 사용된다
-- 트랜지션은 뿌리(:root)에 선언한다.
-- 액션을 나눠서 주려면 콤마를 이용해서 따로 준다.
+```
+  요소의 속성을 서서의 다른 상태로 변화하는 애니메이션을 만드는 방법
+  state (ex. :hover , :active ...)가 없는 요소에 붙는게 좋다
+  transition은 state에 따라 바뀌는 property를 갖고 있으면 사용된다
+  트랜지션은 뿌리(:root)에 선언한다.
+  액션을 나눠서 주려면 콤마를 이용해서 따로 준다.
+```
 
     <!-- 예시-->
     <head>
@@ -154,18 +156,19 @@
         justify-content: center;
         align-items: center;
         }
+
       div {
         width: 300px;
         height: 300px;
         background-color: teal;
         transition: background-color 2s ease-in-out;
         }
+
       div:hover {
         background-color: aquamarine;
         opacity: 0.5;
         }
     </style>
-
     </head>
     <body>
       <div></div>
