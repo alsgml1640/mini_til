@@ -59,7 +59,7 @@
         솔직히 보더는 잘 안쓴다 (한종류만 쓴다 solid)
         Box ,inline 과 다 적용된다
 
-### ! Collapsing margin (마진상쇄)
+## ! Collapsing margin (마진상쇄)
 
     흔히 `마진 겹침 현상` 이라고 부름
     박스끼리의 경계가 겹치면 그 두 박스의 마진은 하나로 겹쳐진다
@@ -77,7 +77,7 @@
 - main axis 주축
 - corss axis 교차축
 
-### flex box
+## flex box
 
     자식 요소에는 어떤것도 적지않음
     부모요소에만 명시 `display : flex`
@@ -90,9 +90,9 @@
     - flex-direction 사용
     디폴트는 row(수평) , column(수직)
 
-### position
+## position
 
-#### Fixed
+### Fixed
 
      레이아웃보다는 위치를 아주조금 위로 , 아주조금 옮기고 싶을때 사용….???
      Position :fixed 를 설정해주면 그 박스는 화면에 그대로 고정되어있다
@@ -102,23 +102,23 @@
     이것을 사용하면 다른 레이어에 위치해 있을 것이다
     모든 것의 위에 있다.
 
-#### Static (디폴트)
+### Static (디폴트)
 
     레이아웃이 박스를 처음 위치하는 곳에 두는 것
 
-#### Relative
+### Relative
 
     element가 처음 위치한 곳 기준으로 수정한다.
     보이는 첫 기준점이 정말 중요!
     Top, bottom , left, right 수정시 element가 처음 위치한 곳 기준으로 수정한다.
 
-#### Absolute
+### Absolute
 
     가장 가까운 relative 부모를 기준으로 이동시켜준다.
     만약 찾지못하면 body 기준으로 옮겨질것이다.
     Top, bottom , left, right 수정시 가장 가까운 relative 부모를 기준으로 이동시켜준다.
 
-### 셀렉터 (combinator)
+## 셀렉터 (combinator)
 
     P span : p안의 자식들
     P > span : p 바로 아래 자식
@@ -142,7 +142,7 @@
     필수 입력 대상이 아닌(required) input 요소를 선택자로 사용한다.
 ```
 
-#### transition (트랜지션)
+## transition (트랜지션)
 
 요소의 속성을 서서의 다른 상태로 변화하는 애니메이션을 만드는 방법
 state (ex. :hover , :active ...)가 없는 요소에 붙는게 좋다
@@ -150,8 +150,7 @@ transition은 state에 따라 바뀌는 property를 갖고 있으면 사용된�
 트랜지션은 뿌리(:root)에 선언한다.
 액션을 나눠서 주려면 콤마를 이용해서 따로 준다.
 
-  <!-- 예시-->
-
+    <!-- 예시-->
     <head>
     <style>
       body {
