@@ -1,10 +1,4 @@
-# CSS
-
-- cascading : 위에서 아래로 흐르는
-  브라우저가 코드를 읽을대 위에서 아래로 흐른다
-  만약 같은 상속자를 두고 스타일을 지정하면 마지막이 지정한 스타일이 적용
-
----
+# CSS : 위에서 아래로 흐르는
 
 1. css를 추가하는 방법
 2. display 의 특징
@@ -14,8 +8,9 @@
 6. flex box
 7. position
 8. 셀렉터 (combinator)
-
----
+9. 의사(가상) 요소 - ( pseudo element) -- 수정
+10. 의사(가상) 클래스 ( pseudo selectors) - States -- 수정
+11. 트랜지션
 
 ## css를 추가하는 방법
 
