@@ -31,5 +31,7 @@
 
 ### 2022.01월 TIL
 
-- [2022년 1월 18일](https://github.com/alsgml1640/mini_til/blob/2c829d7200befc0f7adc02f9894189230705d98d/2022/01/20220118.md)
+- [2022년 1월 21일 - Math.random() , 검색 알고리즘](https://github.com/alsgml1640/mini_til/blob/a4294880428ee2405d69f1443fe174dd569cf99e/2022/01/20220121.md)
+- [2022년 1월 19일 - setInterval(), Date()](https://github.com/alsgml1640/mini_til/blob/891f7799636a894d762151b42a792c7f60d87416/2022/01/20220119.md)
+- [2022년 1월 18일 - localStorage ](https://github.com/alsgml1640/mini_til/blob/2c829d7200befc0f7adc02f9894189230705d98d/2022/01/20220118.md)
 - [2022년 1월 17일](https://github.com/alsgml1640/mini_til/blob/2c829d7200befc0f7adc02f9894189230705d98d/2022/01/20220117.md)
