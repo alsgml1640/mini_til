@@ -27,6 +27,85 @@
 
 # 2022년 2월
 
+# 🗓️ 2022.02.16
+
+## 자바스크립트 - Todo-List 관련
+
+### 한 일
+
+1. 노마드 js 강의 - Todo_List 부분 강의 듣기 (7.4 ~ 7.6)
+
+### 배운 것
+
+- localStorage를 이용하여 to-do list 를 만드는법
+
+  ```jsx
+  const todoForm = document.getElementById("todo-form");
+  const toDoInput = todoForm.querySelector("input");
+  const todoList = document.getElementById("todo-list");
+
+  // 투두리스트 배열
+  const toDos = [];
+
+  // 입력한 투두리스트를 localStorage에 저장하는 함수
+  function saveToDos() {
+    localStorage.setItem("toDos", JSON.stringify(toDos));
+  }
+
+  // 1. 입력한 데이터를 to do List 배열에 넣기
+  // 입력칸에 엔터키 입력시 (핸들링 함수)
+
+  function handleTodoSubmit(event) {
+    event.preventDefault();
+    const newTodo = toDoInput.value;
+
+    // 랜덤으로 id를 생성하는 법
+    const newTodoObj = {
+      text: newTodo,
+      id: Date.now(),
+    };
+    toDos.push(newTodoObj);
+  }
+
+  // 2. 새로고침 시 앞 전에 입력한 데이터를 기존 todo_list 배열에 넣기
+  const savedToDos = localStorage.getItem(TODOS_KEY);
+
+  // 저장된 투두리스트가 존재할 시 화면에 그리기
+  if (savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintTodo);
+  }
+  ```
+
+- 랜덤으로 id 만드는 방법
+
+  ```jsx
+  // 1. Date.now()
+  // 밀리초(1000분의 1초)를 주는 함수
+
+  // 랜덤으로 id를 생성하는 법 - 객체로 생성
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  ```
+
+### 느낀 점
+
+노마드 강의를 들으면서 밑에 댓글창을 확인하는게 확실히 갈수록 댓글의 수가 줄어드는 것을 볼수 있다....
+
+하하... 하지만 나는 완강을 해야지!!!
+
+자바스크립트는 공부할수록 너무 어려운 거 같다.
+
+&nbsp;
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.02.15
 
 ## 자바스크립트 - Todo-List 관련
