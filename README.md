@@ -27,6 +27,37 @@
 
 # 2022년 2월
 
+# 🗓️ 2022.02.18
+
+## 자바스크립트 - momentum 클론코딩(노마드)
+
+### 한 일
+
+**노마드코더 자바스크립트 마지막 미션 수행 (진행중) 1일차**
+
+1. html 기본 뼈대 작성
+2. css 파일 모듈화 작업
+3. 배경화면 랜덤으로 지정
+
+### 배운 것(복습한 것)
+
+- 시맨틱 태그 (header , main , section , footer ...)
+  - [참고 링크](https://velog.io/@gil0127/Semantic-Tag-정리)
+- Flex 에 대한 재복습
+  - [참고 링크](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+  - 메인 축(main)과 교차 축(cross)의 차이
+  - justify-content , align-items 의 활용법
+
+### 개선할 점 및 느낀 점
+
+- 오랫만에 css를 하니까 많이 헷갈렸다 . 이번 미션을 수행하면서 자바스크립트에 대한 문법도 다시 익히고 그동안 잠깐 쉬었던 css 연습도 열심히 해야겠다.
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.02.17
 
 ## 자바스크립트
