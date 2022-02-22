@@ -27,6 +27,230 @@
 
 # 2022년 2월
 
+# 🗓️ 2022.02.21
+
+## 1.자바스크립트 - 클린코드
+
+### 찾아보기
+
+<aside>
+💡 1. iife
+2. module
+3. 클로저
+
+</aside>
+
+### 한 일
+
+1. 클린코드 자바스크립트 강의 시청
+
+### 배운 것(복습한 것)
+
+- 전역공간 사용하는 것을 추천안하는 이유
+  - 이유? 어디서나 접근이 가능해서 사용자가 분리했다고 생각해도 런타임환경에서는 분리가 되어있지않다.
+  - 스코프 분리가 매우 위험
+    1. 전역변수 선언 x
+    2. 지역변수 o
+    3. window , global 영역을 조작하지않는다.
+    4. const, let 으로 비꿔도 ok
+    5. iife, module, closure 스코프 나누기
+- 전역이란 ? 윈도우(브라우저 환경)와 글로벌 (node 환경)
+  - 최상위 공간
+    - 노드js
+    - 브라우저 (window)
+- 임시 변수를 쓰지말아야 하는 이유
+  - 명령형으로 가득한 로직
+  - 디버깅 힘들다
+  - 해결책 ?
+    - 함수 나누기
+    - 바로 반환
+    - 고차 함수 (map, filter, reduce...)
+    - 선언형 코드 (선언형 프로그래밍 )
+
+### 개선할 점 및 느낀 점
+
+- 전반적으로 자바스크립트에 대한 이론을 보는 시간이였다
+  클린코드를 짜기 위해 어떻게 고민을 해야하는지
+  예시를 보여주면서 강의를 하시는데 아직은 크게 이해가 안된다할 부분은 없다.
+
+## 2.자바스크립트 - 그림판 만들기
+
+### 한 일
+
+노마드코더 자바스크립트로 그림판 만드는 강의를 시청하면서 실습을 해보았다.
+
+### 배운 것
+
+1. html 을 이용해서 그림판 캔버스 틀 만들기
+2. css를 이용하여 style 적용
+
+### 느낀 점
+
+- 니콜라스의 텐션이 다른 강의와는 다르게 좀 텐션이 내려가있어서.....
+  처음에 들을땐 적응이 안됐다.
+- 강의 시간이 짧아서 금방 마무리할 수 있을거 같다
+  오늘은 늦었으니 내일 다시 화이팅!!
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.02.20
+
+## 자바스크립트 - momentum 클론코딩(노마드)
+
+### 한 일
+
+**노마드코더 자바스크립트 마지막 미션 수행 (진행중) 2일차**
+
+1. 화면 로드시 css animation 기능 추가
+   1. 로그인 시 이름 입력창에 자연스럽게 생성되는 효과
+2. 실시간 시계 기능 추가 - setInterval() , Date() 객체,
+3. 투두 리스트 기능 추가 (입력 및 삭제)
+4. 날씨와 위치 - [openweathermap.org](http://openweathermap.org) → 우리 위치의 날씨를 알려줄 것임
+5. 로그인 시 화면에 명언 랜덤으로 생성
+
+### 배운 것(복습한 것)
+
+- 화면 로드시 css animation 적용
+
+  ```css
+  #login_div {
+    animation: loginFadein 2s;
+  }
+
+  @keyframes loginFadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  ```
+
+- 실시간 시간
+
+  ```jsx
+  function timeCallback() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, 0);
+    const minutes = String(date.getMinutes()).padStart(2, 0);
+    const seconds = String(date.getSeconds()).padStart(2, 0);
+    $clock.innerText = `${hours}:${minutes}:${seconds}`;
+  }
+
+  timeCallback();
+  setInterval(timeCallback, 1000);
+  ```
+
+- To do List 기능
+
+  ```jsx
+  // 1. 로컬스토리지에 저장된 투두리스트 있을 경우
+  const saveTodo = localStorage.getItem("todos");
+
+  if (saveTodo !== null) {
+    const parseSaveTodo = JSON.parse(saveTodo);
+    parseSaveTodo.forEach(paintTodo);
+  }
+
+  // 2. 투두리스트 화면에 그리기
+  function paintTodo(newTodo) {
+    const li = document.createElement("li");
+    li.id = newTodo.id;
+
+    const span = document.createElement("span");
+    span.innerText = "● " + newTodo.text;
+
+    const button = document.createElement("button");
+    button.innerText = "❌";
+
+    button.addEventListener("click", deleteTodo);
+    li.appendChild(span);
+    li.appendChild(button);
+
+    todoList.appendChild(li);
+  }
+
+  // 3. 해당 인풋 text에 입력 시 로컬스터리지에 저장하는 법
+  // 입력 시 key 와 value 설정하기
+  // 투두리스트 전송시
+  function handleTodoSubmit(event) {
+    event.preventDefault();
+    const newTodo = todoInput.value;
+
+    // 랜덤으로 id 생성하기
+    const newTodoObj = {
+      text: newTodo,
+      id: Date.now(),
+    };
+    todoInput.value = "";
+
+    todos.push(newTodoObj);
+    paintTodo(newTodoObj);
+    savedTodos();
+  }
+
+  // 4. 선택한 데이터 삭제
+  // key 값으로 구별해서 삭제하기
+
+  function deleteTodo(event) {
+    const li = event.target.parentElement;
+    li.remove();
+    console.log(li);
+    todos = todos.filter((todo) => todo.id !== Number(li.id));
+    savedTodos();
+  }
+  ```
+
+- 랜덤 화면 및 랜덤 명언
+
+  ```jsx
+  // 랜덤 화면
+  const backgroundImg = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+
+  // 보여질 랜덤 화면 선정
+  const randomImg =
+    backgroundImg[Math.floor(Math.random() * backgroundImg.length)];
+
+  // 화면을 style 백그라운드에 지정
+  document.body.style.background = `url(img/${randomImg} 0% 0% / 100%)`;
+  ```
+
+  ```jsx
+  //랜덤 명언
+  const $quotes = [
+    { quote: "삶이 있는 한 희망은 있다.", author: "키케로" },
+    {
+      quote: "하루에 3시간을 걸으면 7년 후에 지구를 한바퀴 돌 수 있다.",
+      author: "사무엘존슨",
+    },
+  ];
+
+  const quote = document.querySelector("#quote");
+  const author = document.querySelector("#author");
+
+  const todayQuotes = $quotes[Math.floor(Math.random() * $quotes.length)];
+
+  quote.innerHTML = todayQuotes.quote;
+  author.innerHTML = todayQuotes.author;
+  ```
+
+### 개선할 점 및 느낀 점
+
+- fetch 에 대한 개념이 너무 부족하다
+- to do List는 추후에 다시 복습을 해보아야겠다 .
+  생각보다 기능들이 많이 헷갈리는 시간이였다.
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.02.18
 
 ## 자바스크립트 - momentum 클론코딩(노마드)
