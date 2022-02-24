@@ -27,6 +27,142 @@
 
 # 2022년 2월
 
+# 🗓️ 2022.02.24
+
+## 자바스크립트 - 그림판 만들기
+
+### 한 일
+
+1. 노마드코더 그림판 만들기 강의듣기
+2. 그림판 만들기 안보고 처음부터 다시 복습하기 - 진행중
+
+### 배운 것
+
+- 브러쉬 사이즈 변경
+  input value 가져와서 적용시키기
+  ```jsx
+  const range = document.getElementById("jsRange");
+
+  range.addEventListener("input", handleRangeChange);
+
+  function handleRangeChange(event) {
+    const size = event.target.value;
+    ctx.lineWidth = size;
+  }
+  ```
+- fill 버튼 , faint 버튼
+  - 그림판 채우기
+    ‘fill’ 버튼 클릭 후 색상을 선택한 후 , 그림판을 누르면 전체 색이 채워지는 법
+    ```jsx
+    // 'fill'버튼을 누르고 캔버스를 클릭하면 해당 색상으로 화면이 채워짐
+    // 'fill'버튼을 누르면 innerText는 'faint'로 변경
+    const mode = document.querySelector("#jsMode");
+
+    // 캔버스 사이즈
+    const CANVAS_SIZE = 700;
+
+    // 채우기 모드인지 아닌지 boolean 값 추가
+    let filling = false;
+
+    mode.addEventListener('click',handleModeClick);
+
+    // 버튼 클릭시
+    function handleModeClick(){
+    	if(filling){
+    		filling = false;
+    		mode.innerText = "FAINT";
+    	}
+    	else {
+    		filling = true;
+    		mode.innerText = "FILL";
+    	}
+    }
+
+    ****// filling = true 일 때 , 캔버스를 클릭하면 화면이 채워짐
+    canvas.addEventListner('click',handleCanvasClick);
+
+    function handleCanvasClick(){
+    	if(filling){
+    		ctx.fillRect(0,0,CANVAS_SIZE ,CANVAS_SIZE );
+    	}
+    }
+    ```
+- 이미지 저장하기
+  - 우클릭 방지
+    ```jsx
+    img.addEventListner("contextmenu", (event) => {
+      event.preventDefault();
+    });
+    ```
+  - 저장 버튼 클릭시 이미지 저장하기
+    ```jsx
+    saveBtn.addEventListener("click", handleSaveClick);
+
+    function handleSaveClick() {
+      const image = document.getElementById("jsCanvas").toDataURL("image/png");
+      const link = document.createElement("a");
+      link.href = image;
+      link.download = "PaintJS";
+      link.click();
+    }
+    ```
+
+### 느낀 점
+
+- 강의를 반복해서 들으니 조금씩 이해가 가기 시작한다.
+  캔버스안에 있는 기능들은 MDN 자료들을 통해서 좀 더 봐야겠다.
+
+---
+
+&nbsp;
+
+---
+
+# 🗓️ 2022.02.22
+
+## 자바스크립트 - 그림판 만들기
+
+### 한 일
+
+1. 노마드코더 그림판 만들기 강의 - js part 부분 듣기
+
+### 배운 것
+
+- 캔버스(div)위에 인식되게하는 기능
+
+  - addEventListner(”mousemeve” , 함수 )
+
+  ```jsx
+  const canvas = document.getElementById("jsCanvas");
+
+  canvas.addEventListener("mousemove", onMouseMove);
+  ```
+
+- 캔버스 내의 좌표 알기 - offsetX , clientX
+  - clientX, Y : 윈도우 전체의 범위 내의 마우스 위 위치값
+  - offsetX, Y : event 내의 좌표
+- [canvas MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+
+```jsx
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+```
+
+### 개선할 점
+
+- canvas 안의 기능들에 대해 좀더 구체적으로 알아보기
+
+### 느낀 점
+
+- 생각보다 canvas에 기능들이 다양하다는 것을 알았다 .
+  오늘 전반적으로 강의를 듣고 내일 실습하는 시간을 가지자!!
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.02.21
 
 ## 1.자바스크립트 - 클린코드
