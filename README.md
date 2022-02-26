@@ -27,6 +27,96 @@
 
 # 2022년 2월
 
+# 🗓️ 2022.02.26
+
+## 자바스크립트 - 그림판 만들기
+
+### 한 일
+
+1. 그림판 만들기 안보고 처음부터 다시 복습하기 - 마무리
+
+### 배운 것 및 복습한 점
+
+- Fill 버튼 활성화
+  - fill 버튼 클릭 시
+    - 캔버스 클릭하면 선택된 색상으로 캔버스 채워짐
+    - fill 안의 text 가 paint 로 변경
+- Claer 버튼 클릭 시 캔버스 초기화
+
+  ```jsx
+  // 클리어 버튼 가져오기
+  const clearBtn = document.querySelector(".clearBtn");
+
+  // 클리어버튼 클릭시 이벤트 생성
+  clearBtn.addEventListner("click", handleClearBtnClick);
+
+  // 클리어 버튼 클릭시 함수
+  function handleClearBtnClick() {
+    canvas.getContext("2d").fillStyle = "white";
+    canvas.getContext("2d").fillRect(0, 0, canvasWidth, canvasHeight);
+  }
+  ```
+
+- 저장 버튼 클릭시 이미지 저장
+
+  ```jsx
+  // 저장 버튼 가져오기
+  const saveBtn = document.querySelector(".saveBtn");
+
+  // 저장 버튼 클릭시 이벤트 생성
+  saveBtn.addEventListner("click", handleSaveBtnClick);
+
+  // 저장 버튼 클릭시 발생하는 함수
+  function handleSaveBtnClick() {
+    const link = document.createElement("a");
+    link.download = "paintImg";
+    link.href = canvas.toDataURL();
+    link.click();
+  }
+  ```
+
+### 느낀 점
+
+- 오늘까지 그림판 구현하는 것을 전반적으로 다시 해보았다.
+  안보고해서 좀 막막했는데 막상 하니까 구글링도 하고 이것저것 생각하면서 하다보니 생각보다 엄청 어렵지는 않았다.
+  기능 구현까지 다하니까 되게 뿌듯하다 .
+- 오늘 만든 그림판 기능은 다음에 다른 프로젝트할때나 앞전의 크롬 클론코딩 프로젝트에 넣어서 다시 연습해봐야겠다
+
+### 정리 내용
+
+- [JS 그림판 만들기 정리](https://www.notion.so/aab7d240f28643e18aad7193f17c149a)
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.02.25
+
+## 자바스크립트 - 그림판 만들기
+
+### 한 일
+
+1. 그림판 만들기 안보고 처음부터 다시 복습하기 - 진행중
+
+### 배운 것 및 복습한 점
+
+- 캔버스에 브러쉬로 그리기
+- 색상 변경해서 캔버스에 그리기
+- 브러쉬 사이즈 변경하기
+
+### 느낀 점
+
+- 강의를 반복해서 들으니 조금씩 이해가 가기 시작한다.
+  캔버스안에 있는 기능들은 MDN 자료들을 통해서 좀 더 봐야겠다.
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.02.24
 
 ## 자바스크립트 - 그림판 만들기
@@ -40,6 +130,7 @@
 
 - 브러쉬 사이즈 변경
   input value 가져와서 적용시키기
+
   ```jsx
   const range = document.getElementById("jsRange");
 
@@ -50,9 +141,12 @@
     ctx.lineWidth = size;
   }
   ```
+
 - fill 버튼 , faint 버튼
+
   - 그림판 채우기
     ‘fill’ 버튼 클릭 후 색상을 선택한 후 , 그림판을 누르면 전체 색이 채워지는 법
+
     ```jsx
     // 'fill'버튼을 누르고 캔버스를 클릭하면 해당 색상으로 화면이 채워짐
     // 'fill'버튼을 누르면 innerText는 'faint'로 변경
@@ -87,7 +181,9 @@
     	}
     }
     ```
+
 - 이미지 저장하기
+
   - 우클릭 방지
     ```jsx
     img.addEventListner("contextmenu", (event) => {
@@ -95,6 +191,7 @@
     });
     ```
   - 저장 버튼 클릭시 이미지 저장하기
+
     ```jsx
     saveBtn.addEventListener("click", handleSaveClick);
 
@@ -112,11 +209,11 @@
 - 강의를 반복해서 들으니 조금씩 이해가 가기 시작한다.
   캔버스안에 있는 기능들은 MDN 자료들을 통해서 좀 더 봐야겠다.
 
----
-
 &nbsp;
 
 ---
+
+&nbsp;
 
 # 🗓️ 2022.02.22
 
