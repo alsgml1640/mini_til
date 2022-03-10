@@ -28,6 +28,124 @@
 
 # 2022년 03월
 
+# 🗓️ 2022.03.09
+
+## 한 일
+
+### 1. 자바스크립트 틱택토 게임
+
+- 강의 듣기 9-6부터 듣기시작해서 틱택토 파트 완강
+
+### 2. 자바스크립트 알고리즘 문제 풀기 → [내용 정리](https://mini1122.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EA%B3%B5%EB%B6%80/JavaScript)
+
+- 섹션1 완료
+  - 중복 문자 제거
+  - 중복 단어제거
+- 섹션2 - 3문제 풀기 완료
+  - 큰 수 출력하기
+  - 보이는 학생
+  - 가위바위보
+
+## 배운것
+
+- Array.from()
+  유사 배열 객체나 반복 가능한 객체를 얕게 복사해 새로운 Array 객체를 만든다.
+
+## 피드백
+
+- 제로토 틱택토 만들기 강의를 드디어 끝냈다
+  여기서만 배운게 ‘이차원 배열, 구조분해 할당, 이벤트 버블링,parentNode, children, every,some, flat...’등 많은 이론을 배웠다 .
+  이번 파트는 유독 어려웠다 ㅜㅜㅜㅜ
+  틱택토에 너무 많은 시간을 빼았긴거같아서 일단 넘어가고 다음 강의를 들으면서 천천히 다져야겠다
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.03.08
+
+## 한 일
+
+### 1. 엘리스 SW 프리트랙
+
+- 자바스크립트 기초 (03.문제모음까지 풂)
+- 논리력 퀴즈 진행중
+
+### 2. 자바스크립트 알고리즘 문제 풀기
+
+- 가장 긴 문자열 찾기 → 배열에서 가장 긴 문자열 출력
+- 가운데 문자 출력 → 주어진 문자열에서 가운데 문자를 출력 , 짝수면 2개 출력
+
+### 3. 자바스크립트 틱택토 게임
+
+- 강의 듣기 9-6부터 듣기 시작 - 진행중
+
+## 배운것
+
+- 가장 긴 문자열 찾기 알고리즘
+  _n개의 문자열이 입력되면 그중 가장 긴 문자열을 출력하는 프로그램 작성_
+
+  ```jsx
+  function solution(s) {
+    let answer = "";
+    let maxLength = Number.MIN_SAFE_INTEGER;
+
+    for (let i = 0; i < s.length; i++) {
+      if (maxLength < s[i].length) {
+        maxLength = s[i].length;
+        answer = s[i];
+      }
+    }
+
+    //answer = maxLength;
+    return answer;
+  }
+  let str = ["teacher", "time", "student", "beautiful", "good"];
+  console.log(solution(str));
+  ```
+
+- 가운데 문자 출력 알고리즘
+  _소문자로 된 단어(문자열)가 입력되면 그 단어의 가운데 문자룰 출력_
+  _단 길이가 짝수면 가운데 2개 문자 출력 '_
+
+  ```jsx
+  function solution(s) {
+    let answer;
+    let mid = 0;
+
+    if (s.length % 2 === 0) {
+      mid = s.length / 2;
+      answer = s[mid - 1] + s[mid];
+      //console.log(mid - 1, mid);
+    } else {
+      mid = Math.floor(s.length / 2);
+      answer = s[mid];
+    }
+
+    return answer;
+  }
+  console.log(solution("good"));
+  ```
+
+- event.stoppropagation()
+  - 현재 이벤트가 상위로 전파되지 않도록 중단
+
+## 피드백
+
+- 오늘 저녁에는 기타교실에 가야되어서 집에서 공부를 하다가 갔다 .
+  틱택토강의를 듣던 중 기타교실에 갔다가 저녁에 마무리를 하려고 했으나 ....
+  아빠의 술 권유에 한잔하고 그냥 뻗어서 결국 틱택토 마무리는 못하였다....
+  내일까지 꼭 마무리해야지!!
+- 그래도 코딩테스트랑 엘리스SW는 집중해서 잘한거같다
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.03.07
 
 ## 한 일
@@ -58,6 +176,7 @@
   }
   ```
 - for ...in , for... of 의 차이
+
   ```jsx
   // for ...in 의 경우
   let str = "qweasdzxc";
@@ -78,6 +197,7 @@
   // 7 x
   // 8 c
   ```
+
   ```jsx
   // for ...of 의 경우
   let str = "qweasdzxc";
