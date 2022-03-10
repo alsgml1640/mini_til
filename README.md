@@ -36,7 +36,7 @@
 
 - 강의 듣기 9-6부터 듣기시작해서 틱택토 파트 완강
 
-### 2. 자바스크립트 알고리즘 문제 풀기 → [내용 정리](https://mini1122.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EA%B3%B5%EB%B6%80/JavaScript)
+### 2. 자바스크립트 알고리즘 문제 풀기 → [내용 정리](https://mini1122.tistory.com/category/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EA%B3%B5%EB%B6%80/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 - 섹션1 완료
   - 중복 문자 제거
