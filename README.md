@@ -28,6 +28,80 @@
 
 # 2022년 03월
 
+# 🗓️ 2022.03.22
+
+## 한 일
+
+1. 생활코딩 강의 듣기 - 정규 표현식
+2. 자바스크립트 알고리즘
+   1. 백준 - 3문제
+   2. 인프런 - 2문제
+
+## 배운 것
+
+- 정규표현식에 대한 정리 ( ^ , $ , \* , + , ? ,{n} , )
+- 백준에서 js로 알고리즘을 풀때 콘솔 입력방식
+  - require(’readline’)
+
+---
+
+# 🗓️ 2022.03.16
+
+## 한 일
+
+1. 제로초 RPG 게임 10-7까지 들음
+
+## 배운 것
+
+- 얕은 복사 , 깊은 복사
+
+  - 원시값과 참조 구분하기
+
+  ```jsx
+  // 깊은 복사를 하라
+  const a = "b"; // 원시값
+  const c = ["d", true, 1];
+  const e = { g: "h" };
+  const i = [{ j: "k" }, { l: "m" }];
+  const n = { o: { p: "q" } };
+
+  // => 결과값
+  const a1 = a; // 원시값이기때문에 그냥 넣으면 됨
+  const c1 = [...c]; // c.slice(); -> 배열안의 값이 다 원시값이라서
+  const e1 = { ...e }; // 객체안에 원시값이 들어가 있어서
+  const i1 = JSON.parse(JSON.stringfy(i));
+  const n1 = JSON.parse(JSON.stringfy(n));
+  ```
+
+- **this** !!!! → js의 this는 다른 언어의 this랑 많이 다르다!!!
+  기본적으로 window를 가르키지만 , 객체안에 들어있는 this는 객체를 가르킨다.
+  호출하는 시점에 주의해야한다!!
+- **class (클래스) - 객체를 생성하기 위한 템플릿**
+  뭔가 비슷한 객체를 계속 공장처럼 찍어내거나 , 상호작용이 필요할 때
+- 생성자
+- 얕은 복사 , 깊은 복사
+- 화살표 함수와 this
+
+```jsx
+// function 썼을 때
+document.addEventListner("click", function () {
+  console.log(this); // document
+});
+
+// 화살표함수 썼을 때
+document.addEventListner("click", () => {
+  console.log(this); // window
+});
+```
+
+- 객체지향 프로그래밍
+
+## 피드백
+
+- 자바스크립트 문법에 대해 좀만 깊이 들어가면 금새 헷갈려한다는점
+
+---
+
 # 🗓️ 2022.03.15
 
 ## 한 일
