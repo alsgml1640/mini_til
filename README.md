@@ -34,6 +34,129 @@
 
 # 2022년 05월
 
+# 🗓️ 2022.05.20
+
+## **✅**한 일
+
+### 1. 엘리스 강의
+
+- 5월 19일차 미들웨어와 Restful API 실습 복습
+- 5월 20일차 몽고디비와 몽구스 배운내용 점검 복습
+
+### 2. 엘리스 1차 스터디 발표시청
+
+- 5주간 진행한 스터디 자료를 정리하여 다른 팀들과 다같이 발표하는 시간 가짐
+  - 발표는 다른분이 하시고 나는 구경…..
+
+## 😃 느낀 점 및 피드백
+
+- 1차 스터디 발표를 보면서 다들 능력자가 많다고 느꼈다 .
+  내 스스로가 너무 부족한거도 많이 보였고
+  지금처럼 공부하면 안되겠다는 자극점도 많이 받았다 .
+- 정신 차리자!!!!!!
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.05.18
+
+## **✅** 한 일
+
+### 1. 엘리스 실강 - express.js , 미들웨어
+
+### 2. 백준 알고리즘
+
+- 1712번 - 손익분기점
+
+### 3. 코딩애플 node.js 강의
+
+## 🎯 배운 것
+
+### 1. body-parser
+
+- 보통 req.body 부분을 undefined로 처리하는데
+  여기서 `**body-parser**` 를 이용하면 해당 데이터를 사용자가 원하는 형태로 파싱하여 사용가능!
+
+  ````jsx
+  const express = require('express');
+  const bodyParser = require('body-parser');
+  const app = express();
+
+      // 추가
+      app.use(bodyParser().json()); // json 형태로 파싱
+      app.use(express.urlencoded(){ extended : false })
+      app.post('/', function(req,res){
+      	let post = req.body ;
+      	console.log(post);
+      })
+      ```
+
+      `**app.use(express.urlencoded(){ extended : false })**`
+
+      → false : 기본으로 내장된 **querystring 모듈** 사용
+
+      → true : 따로 설치가 필요한 qs 모듈을 사용하여 쿼리 스트링을 해석
+  ````
+
+### API
+
+- 웹서버와 고객간의 소통방법
+- 어떻게 해야 서버랑 통신을 할수 있을까
+
+### rest API
+
+1. **uniform interface → 제일 중요!!**
+   - 하나의 자료는 하나의 url로
+   - url 하나를 알면 둘을 알수 있어야한다
+   - 요청과 응답은 정보가 충분히 들어있어야한다.
+2. client - server 역할 구분
+   - 브라우저는 요청만 할뿐
+   - 서버는 응답만 할뿐
+3. stateless
+   - 요청1과 요청2는 의존성이 없어야한다.
+4. cacheable
+5. layered system
+6. code on demand
+
+### nodemon → node monitor 의 약자
+
+- 코드를 변경할 때 마다 자동으로 서버를 재실행해주는 도구
+
+## 😃 느낀 점 및 피드백
+
+- 백엔드 과정에 들어가면서 node js , express 과정에 들어가면서
+  정말 하루하루 멘붕이다……
+  차근차근 돌아가자…. ㅜㅜㅜㅜ
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.05.17
+
+## **✅** 한 일
+
+### 1. 엘리스 온라인 강의
+
+- npm, express 관련 강의
+
+## 😃 느낀 점 및 피드백
+
+- 이번주와 다음주는 백엔드 과정을 배운다 .
+  하아.... 아직 타입스크립트도 잘 모르는데 백엔드까지 하려니 너무 어렵다 ㅠㅠㅠ
+  하루하루가 버겁다 ㅠㅜㅠ
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.05.15
 
 ## **✅** 한 일
