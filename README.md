@@ -45,7 +45,7 @@
 - 제품 목록 리스트 뼈대 구현 (product-list.html) - 다시 작업함!
   - 어제까지 작업했던 html 구조에 bulma css 를 입히니 갈수록 이상하게 나와서 결국 새로 생성해서 다시 작업
   - 작업한 이미지
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6dabdc16-bbac-4511-a939-180ea85601ac/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/50939886/171647098-1d28173b-0f18-4d73-8288-6314c865f67d.png)
 
 ### 2. 오피스 아워 (프론트엔드) 피드백 진행
 
