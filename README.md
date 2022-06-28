@@ -35,6 +35,69 @@
 
 # 2022년 06월
 
+# 🗓️ 2022.06.25 - 토
+
+## **✅ 한일**
+
+### 1. 코딩애플 강의 - 리액트 부분
+
+## 🎯 배운 것
+
+### 이벤트 버블링
+
+클릭 시 최상위 요소까지 이벤트가 퍼지는 현상
+
+? 만약에 이 버블링 현상을 막고싶다면 ?
+
+**`event.stopPropagation()`** 사용 시 상위 요소까지 이벤트가 퍼지지 않는다.
+
+### react에서 class component
+
+- class 키워드 필요
+- Component로 상속을 받아야한다.
+- render() 메소드가 반드시 있어야한다
+- state는 constructor 안에 작성
+  ```jsx
+  class Profile extends Components {
+    constructor() {
+      super();
+      this.state = { name: "Jung" };
+    }
+  }
+  ```
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.06.23 - 목
+
+## **✅ 한일**
+
+### 1. 엘리스 온라인 강의
+
+- react-router
+  - SPA와 라우팅
+  - react-router components
+
+## 🎯 배운 것
+
+### redirect , render 차이
+
+- [참고 링크](https://www.careerride.com/view/what-is-the-difference-between-render-and-redirect-ruby-on-rails-2431.aspx)
+
+redirect는 react-router-dom에서 import해서 사용
+
+redirect 컴포넌트는 랜더링되면 to로 지정된 경로로 이동
+
+&nbsp;
+
+---
+
+&nbsp;
+
 # 🗓️ 2022.06.22 - 수
 
 ## **✅**한 일
