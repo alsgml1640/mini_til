@@ -17,6 +17,7 @@
 
 # history
 
+- [2022년 07월](#2022년-07월)
 - [2022년 06월](#2022년-06월)
 - [2022년 05월](#2022년-05월)
 - [2022년 04월](#2022년-04월)
@@ -26,6 +27,73 @@
 - [2021년 12월](#2021년-12월)
 - 2021년 11월 - 추가 예정
 - 2021년 10월 - 추가 예정
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 2022년 07월
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 🗓️ 2022.07.02 - 토
+
+## **✅ 배운 것**
+
+### 1. 코딩애플 리액트 부분
+
+- 기본 라우팅 관련
+
+## 🎯 배운것
+
+[https://velog.io/@seokkitdo/React-Link-useNavigate](https://velog.io/@seokkitdo/React-Link-useNavigate)
+
+### 1. Link
+
+- 클릭 시 바로 이동하는 로직 구현 시에 사용
+- ex) 상품 리스트에서 상세 페이지 이동 시
+
+### 2. useNavigate
+
+- 페이지 전환 시 추가로 처리해야 하는 로직이 있을 경우 `useNavigate` 사용
+- ex) 로그인 버튼 클릭 시
+  - 회원가입 되어 있는 사용자 -> Main 페이지로 이동
+  - 회원가입이 되어 있지 않은 사용자 -> SignUp 페이지로 이동
+- useNavigate(-1) - 뒤로 가기
+
+### 3. nested routes
+
+- 여러 **`유사한`** 페이지가 필요할 때
+
+```jsx
+<Route path="/about" element={<About />}>
+  <Route path="member" element={<div>멤버</div>} />
+	<Route path="location" element={<div>위치 정보</div>} />
+</Route>
+
+---
+
+function About() {
+  return (
+    <>
+      <h4>회사 정보</h4>
+      <Outlet></Outlet>
+    </>
+  );
+}
+```
+
+## 😃 느낀 점
+
+- 리액트가 좀 익숙해지는 거 같으면서도 아직 헷갈리는 게 많다.
+- 정신없이 우당탕탕 지나가는 느낌이지만 그래도 좀더 욕심내보자!
+- 아직 배워 나갈게 너무 많다!
 
 &nbsp;
 
