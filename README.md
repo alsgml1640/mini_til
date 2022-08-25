@@ -17,6 +17,7 @@
 
 # history
 
+- [2022년 08월](#2022년-08월)
 - [2022년 07월](#2022년-07월)
 - [2022년 06월](#2022년-06월)
 - [2022년 05월](#2022년-05월)
@@ -25,8 +26,109 @@
 - [2022년 02월](#2022년-02월)
 - [2022년 01월](#2022년-01월)
 - [2021년 12월](#2021년-12월)
-- 2021년 11월 - 추가 예정
-- 2021년 10월 - 추가 예정
+
+&nbsp;
+
+---
+
+&nbsp;
+
+# 2022년 08월
+
+# 🗓️ 2022.08.23 - 화
+
+## **✅ 한 일**
+
+### 1. 영어 필사 100일의 기적 - 3일차
+
+### 2. 노마드 - 리액트 영화 웹서비스
+
+- 7.2 - 화폐 추적기 → [https://api.coinpaprika.com/v1/tickers](https://api.coinpaprika.com/v1/tickers) 참고
+  - 코드 챌린지 : usd를 btc로 전환
+  - input 에 내가 가지고있는 돈을 적어서 얼마의 btc…등 가상화폐를 구매할수 있는지
+
+## 🎯 배운것
+
+1. fetch
+
+   자바스크립트를 사용시 필요할때 서버에 네트워크 요청을 보내고 새로운 정보를 받아오는 일을 할 수 있다.
+
+2. await , async
+
+   Promise를 더욱 쉽게 사용하게 해준다.
+
+   - Promise : 비동기 작업을 조금 더 편하게 해주는 기능
+     ```jsx
+     const myPromise = new Promise((resolve, reject) => {
+       // 구현..
+     });
+     ```
+
+## 😃 느낀 점
+
+- 오픈 api로 데이터를 받아오는데 순간 바로 fetct를 써서 가져오니까 원하는 결과가 안나와서 왜이런가 했는데…..
+  역시 자꾸 반복하지 않으면 금새 까먹기 일수이다
+- await, async 는 아직도 100프로 이해한거는 아니지만 왜 어디에 쓰이는지는 조금은 알거같다.
+
+---
+
+# 🗓️ 2022.08.22 - 월
+
+## **✅ 한 일**
+
+### 1. 영어 필사 100일의 기적 - 2일차
+
+### 2. 노마드 - 리액트 영화 웹서비스
+
+- 6.0 - 이론파트
+- 7.0 - 투두 리스트
+- 7.2 - 화폐 추적기
+  - 코드 챌린지 : usd를 btc로 전환
+  - input 에 내가 가지고있는 돈을 적어서 얼마의 btc…등 가상화폐를 구매할수 있는지
+
+## 🎯 배운것
+
+1. useState - [https://www.geeksforgeeks.org/what-is-usestate-in-react/](https://www.geeksforgeeks.org/what-is-usestate-in-react/)
+
+   기능 구성요소에 상태 변수를 가질수 있게 해주는 HOOK
+
+   ```jsx
+   import { useState } from "react";
+
+   const [상태, set상태] = useState(초기상태);
+   ```
+
+2. useEffect
+
+   컴포넌트가 렌더링될 때 특정 작업을 실행할 수 있도록 하는 hook
+
+   컴포넌트가 **1. 마운트 됐을 때 2. 언마운트 됐을때 3. 업데이트 됐을때** → [https://ko.reactjs.org/docs/hooks-effect.html](https://ko.reactjs.org/docs/hooks-effect.html)
+
+   ```jsx
+   import {useEffect} from 'react';
+   useEffect(렌더링이후 실행할 함수, [deps])
+   ```
+
+   1. 렌더링이후 실행할 함수
+   2. deps
+
+      useEffect 실행시 이러이러한 상황일때 이 effect를 실행해줘라고 지정하는 배열
+
+   3. cleanup → destroy 될때 사용되는 함수
+
+      ```jsx
+      useEffect(() => {
+        return () => {
+          // 클린업 코드
+        };
+      }, []);
+      ```
+
+## 😃 느낀 점
+
+- 엘리스 수료 후 개인사정으로 거의 공부를 못했던 나는 이번에 다시 리액트를 차근차근 공부중이다 .
+  하지만 며칠 안봤다고 ㅜㅜㅜ 또 가물가물하다 ,ㅠㅠㅠ
+- 빠르게 훑고 다른 강의도 뿌시자!!
 
 &nbsp;
 
